@@ -5,14 +5,16 @@ using UnityEngine;
 public class Agent : MonoBehaviour {
 
     private static Color[] colors = { Color.green, Color.red };
-    static int GREEN = 0;
+    static int BLUE = 0;
     static int RED = 1;
-    
+    static int GREEN = 2;
+    static int YELLOW = 3;
+
     public enum EMood
     {
         Neutral = 0,
-        Happy,
         Angry,
+        Happy,
         Scared,
         Count,
     };
