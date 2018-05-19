@@ -488,6 +488,7 @@ GameObject:
   - component: {fileID: 1084232062}
   - component: {fileID: 1084232061}
   - component: {fileID: 1084232066}
+  - component: {fileID: 1084232068}
   - component: {fileID: 1084232067}
   m_Layer: 0
   m_Name: AIAgent
@@ -607,6 +608,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &1084232068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1084232060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a84713bb32aa484418d1b4eec6302faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_states:
+  - {fileID: 114501799246493392, guid: 395851f0f0039614e95d61891b99b7e3, type: 2}
+  - {fileID: 114342688791171884, guid: c16d0a9deb724474aa177cc91ede6c25, type: 2}
+  - {fileID: 114478385503932882, guid: 67437c57e70b9e044b58a85b966257db, type: 2}
+  m_initStateID: 2
 --- !u!1 &1110890512
 GameObject:
   m_ObjectHideFlags: 0

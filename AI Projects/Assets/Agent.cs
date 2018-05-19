@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Agent : MonoBehaviour {
 
-    private static Color[] colors = { Color.green, Color.red };
+    private static Color[] colors = {Color.blue, Color.red , Color.green ,Color.yellow};
     static int BLUE = 0;
     static int RED = 1;
     static int GREEN = 2;
@@ -20,7 +20,20 @@ public class Agent : MonoBehaviour {
     };
 
     private EMood m_mood = EMood.Neutral;
-    public EMood Mood { set; get; }
+    public EMood Mood
+    {
+        set
+        {
+            m_mood = value;
+            UpdateColor();
+
+        }
+
+        get
+        {
+            return m_mood;
+        }
+    }
 
     //meters/second
     public float MaxLinearSpeed = 5.0f;
@@ -36,8 +49,7 @@ public class Agent : MonoBehaviour {
 
     void UpdateColor()
     {
-        int colorIndex = (m_mood == EMood.Angry) ? RED : GREEN;
-        GetComponent<Renderer>().material.color = colors[colorIndex];
+        GetComponent<Renderer>().material.color = colors[(int)m_mood];
     }
 
     public void Move(float speedRatio)
@@ -74,7 +86,7 @@ public class Agent : MonoBehaviour {
     // Use this for initialization
     void Start () {
         m_rb = GetComponent<Rigidbody>();
-        UpdateColor();
+        //UpdateColor();
     }
 	
 

@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            FindObjectOfType<AIAgentController>().MoodSwitch();
+            //FindObjectOfType<AIAgentController>().MoodSwitch();
         }
         
 

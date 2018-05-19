@@ -16,7 +16,7 @@ public class AIAgentController : MonoBehaviour {
     void Start()
     {
         m_agent = GetComponent<Agent>();
-        m_mood = Agent.EMood.Neutral;
+        //m_mood = Agent.EMood.Neutral;
     }
 
 
@@ -87,11 +87,11 @@ public class AIAgentController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
         if (m_agent == null)
         {
             return;
         }
+        /*
         if (m_mood == Agent.EMood.Angry)
         {
             TurnTowardsTarget();
@@ -106,6 +106,7 @@ public class AIAgentController : MonoBehaviour {
         {
             StopMoving();
         }
+        */
     }
     public void MoodSwitch()
     {
